@@ -7,6 +7,8 @@ interface svgProps {
   path?: string;
   pathlist?: string[];
   style?: React.CSSProperties;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  pathtags?: { [key: string]: any };
 }
 import { motion } from "framer-motion";
 
@@ -18,6 +20,7 @@ export default function Svg(props: svgProps) {
       className={props.classlist}
       viewBox={props.view}
       style={props.style}
+      {...props.pathtags}
     >
       <g>
         {props.path && (

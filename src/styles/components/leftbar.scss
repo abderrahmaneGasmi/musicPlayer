@@ -2,8 +2,12 @@
   display: flex;
   background-image: radial-gradient(circle at 0 0, #965b9d, #7758d1);
   flex-direction: column;
+
   padding: 1rem;
+  padding-top: 3rem;
   gap: 2rem;
+  position: relative;
+
   &__nav {
     display: flex;
     flex-direction: column;
@@ -22,6 +26,24 @@
   &__seperator {
     height: 1px;
     background-color: rgba(255, 255, 255, 0.285);
+  }
+  &__floatbtn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.8rem 1rem;
+    padding-bottom: 0.4rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25%;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.262);
+    }
+    &__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      fill: #ffffffa4;
+    }
   }
 }
 .navitem {
