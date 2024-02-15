@@ -1,10 +1,14 @@
-import Navbar from "./components/Navbar";
-
+import Leftbar from "./components/Leftbar";
+import Main from "./components/Main";
+import Rightbar from "./components/Rightbar";
+import "./styles/app.css";
 function App() {
   return (
-    <>
-      <Navbar />
-    </>
+    <div className="main">
+      <Leftbar />
+      <Main />
+      <Rightbar />
+    </div>
   );
 }
 

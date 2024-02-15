@@ -1,0 +1,78 @@
+.leftbar {
+  display: flex;
+  background-image: radial-gradient(circle at 0 0, #965b9d, #7758d1);
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__channels {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &__header {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+  &__seperator {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.285);
+  }
+}
+.navitem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-radius: 5px;
+  gap: 1rem;
+  &:hover {
+    // background-color: $color-hover;
+    background-color: rgba(0, 0, 0, 0.304);
+  }
+  &__icon {
+    $size: 3rem;
+    width: $size;
+    height: $size;
+    fill: rgba(255, 255, 255, 0.597);
+  }
+  &__text {
+    font-size: 1.5rem;
+  }
+  &__active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-right: 3px solid #fff;
+  }
+}
+.channelitem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-radius: 5px;
+  gap: 1rem;
+  &:hover {
+    // background-color: $color-hover;
+    background-color: rgba(0, 0, 0, 0.304);
+  }
+  &__avatar {
+    width: 3rem;
+    height: 3rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  &__name {
+    font-size: 1.5rem;
+  }
+}
