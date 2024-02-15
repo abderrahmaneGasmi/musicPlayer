@@ -1,7 +1,16 @@
 import React from "react";
 import "../styles/components/main.scss";
 import Svg from "../assets/Svg";
-import { music, search } from "../static/icons";
+import {
+  heart,
+  music,
+  next,
+  play,
+  previous,
+  random,
+  refresh,
+  search,
+} from "../static/icons";
 export default function Main() {
   return (
     <div className="maincontainer">
@@ -64,6 +73,11 @@ export default function Main() {
           songs={20}
         />
       </div>
+      <MediaPlayer
+        song="Song Title"
+        artist="Artist Name"
+        image="/images/logo (1).png"
+      />
     </div>
   );
 }
@@ -128,6 +142,73 @@ function Genre({
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+function MediaPlayer({
+  song,
+  artist,
+  image,
+}: {
+  song: string;
+  artist: string;
+  image: string;
+}) {
+  return (
+    <div className="mediaplayer">
+      <div className="mediaplayer__info">
+        <div className="mediaplayer__info__image">
+          <img src={image} alt="song" />
+        </div>
+        <div className="mediaplayer__info__text">
+          <div className="mediaplayer__info__text__title">{song}</div>
+          <div className="mediaplayer__info__text__artist">{artist}</div>
+        </div>
+        <div className="mediaplayer__info__icons">
+          <Svg
+            path={heart.path}
+            view={heart.view}
+            classlist="mediaplayer__info__icons__icon"
+          />
+        </div>
+      </div>
+      <div className="mediaplayer__controls">
+        <div className="mediaplayer__controls__play">
+          <Svg
+            path={random.path}
+            view={random.view}
+            classlist="mediaplayer__controls__play__smallicon"
+          />
+          <Svg
+            path={previous.path}
+            view={previous.view}
+            classlist="mediaplayer__controls__play__smallicon"
+          />
+          <Svg
+            path={play.path}
+            view={play.view}
+            classlist="mediaplayer__controls__play__icon"
+          />{" "}
+          <Svg
+            path={next.path}
+            view={next.view}
+            classlist="mediaplayer__controls__play__smallicon"
+          />
+          <Svg
+            path={refresh.path}
+            view={refresh.view}
+            classlist="mediaplayer__controls__play__smallicon"
+          />
+        </div>
+        <div className="mediaplayer__controls__progress">
+          <div className="mediaplayer__controls__progress__time">00:00</div>
+          <div className="mediaplayer__controls__progress__bar">
+            <div className="mediaplayer__controls__progress__bar__progress"></div>
+          </div>
+          <div className="mediaplayer__controls__progress__time">03:00</div>
+        </div>
+      </div>
+      <div className="mediaplayer__overlay"></div>
     </div>
   );
 }
