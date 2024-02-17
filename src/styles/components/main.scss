@@ -58,13 +58,13 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    img {
+    &__icon {
       $size: 5rem;
       width: $size;
       height: $size;
-
-      background-color: #fff;
-      border-radius: 25%;
+      fill: #ffffff;
+      filter: drop-shadow(2px 2px 4px hsl(313, 100%, 50%))
+        drop-shadow(2px 2px 8px hsl(188, 100%, 50%)) hue-rotate(91deg);
     }
     &__text {
       font-size: 2rem;
@@ -107,6 +107,8 @@
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
+  filter: drop-shadow(-1px -1px 5px hsl(313, 100%, 50%))
+    drop-shadow(1px 1px 5px hsl(188, 100%, 50%));
   &:hover {
     .banner__overlay {
       backdrop-filter: blur(1px);
@@ -130,12 +132,14 @@
       font-size: 5rem;
       font-weight: 700;
       color: #fff;
+      white-space: nowrap;
     }
     &__subtitle {
       font-size: 2rem;
       font-weight: 500;
       margin-left: 0.5rem;
       color: #fff;
+      white-space: nowrap;
     }
   }
   &__overlay {
@@ -162,6 +166,8 @@
   transition: background-color 0.3s;
   position: relative;
   min-height: 20rem;
+  filter: drop-shadow(2px 3px 8px hsl(313, 100%, 50%))
+    drop-shadow(0px -4px 7px hsl(188, 100%, 50%));
   &__background {
     position: absolute;
     top: 0;
@@ -169,6 +175,7 @@
     right: 0;
     bottom: 0;
     z-index: 1;
+
     img {
       width: 100%;
       height: 100%;
@@ -356,7 +363,7 @@
           top: 0;
           left: 0;
           height: 100%;
-          width: 50%;
+          width: 90%;
           $color: #ffffff;
           background-color: $color;
           box-shadow: 0 2px 9px 0px $color;
@@ -432,6 +439,8 @@
     background-color: #ffffff4f;
     padding: 1rem 0;
     border-radius: 1rem;
+    filter: drop-shadow(2px 3px 8px hsl(313, 100%, 50%))
+      drop-shadow(0px -4px 7px hsl(188, 100%, 50%));
     img {
       width: 100%;
       height: 100%;
@@ -466,6 +475,8 @@
     height: $size;
     border-radius: 50%;
     overflow: hidden;
+    filter: drop-shadow(2px 3px 8px hsl(313, 100%, 50%))
+      drop-shadow(0px -4px 7px hsl(188, 100%, 50%));
     img {
       width: 100%;
       height: 100%;

@@ -18,13 +18,30 @@
     background-color: #2e335a;
     height: 5rem;
     &__icon {
-      height: 2.5rem;
-      width: 2.5rem;
-      fill: #ffffff8e;
-      cursor: pointer;
-      transition: color 0.3s;
-      &:hover {
-        color: #ffffff;
+      position: relative;
+      &__svg {
+        height: 2.5rem;
+        width: 2.5rem;
+        fill: #ffffff8e;
+        cursor: pointer;
+        transition: fill 0.3s;
+        &__active {
+          fill: #ffffff;
+          filter: drop-shadow(0px 0px 5px #ffffff);
+        }
+        &:hover {
+          fill: #ffffff;
+        }
+      }
+      &__badge {
+        position: absolute;
+        top: -0.2rem;
+        right: -0.2rem;
+        background-color: #ff4d4d;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        z-index: 5;
       }
     }
   }
@@ -81,6 +98,8 @@
   float: left;
   position: absolute;
   overflow: hidden;
+  filter: drop-shadow(5px 6px 11px hsl(313, 100%, 50%))
+    drop-shadow(0px -4px 13px hsl(188, 100%, 50%));
   // rotate: 15deg;
 }
 .octagon {
@@ -95,7 +114,6 @@
   transform: rotate(45deg);
   border: 3px solid #ffffffb0;
   border-radius: 19px;
-  box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.6901960784);
 }
 .octagon:before {
   position: absolute;
@@ -110,5 +128,4 @@
   transform: rotate(45deg);
   content: "";
   border: inherit;
-  box-shadow: inherit;
 }

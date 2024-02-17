@@ -36,13 +36,15 @@
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 25%;
     cursor: pointer;
+
     &:hover {
       background-color: rgba(255, 255, 255, 0.262);
     }
     &__icon {
       width: 2.5rem;
       height: 2.5rem;
-      fill: #ffffffa4;
+      fill: #ffffff;
+      filter: drop-shadow(0px 0px 5px #ffffff);
     }
   }
 }
@@ -62,7 +64,8 @@
     $size: 3rem;
     width: $size;
     height: $size;
-    fill: rgba(255, 255, 255, 0.597);
+    fill: #ffffff;
+    filter: drop-shadow(0px 0px 1px #ffffff);
   }
   &__text {
     font-size: 1.5rem;

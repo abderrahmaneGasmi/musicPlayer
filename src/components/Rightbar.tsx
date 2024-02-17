@@ -7,24 +7,30 @@ export default function Rightbar() {
   return (
     <div className="rightbar">
       <div className="rightbar__icons">
-        <Svg
-          path={bell.path}
-          view={bell.view}
-          classlist="rightbar__icons__icon"
-          pathtags={{
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-          }}
-        />
-        <Svg
-          path={chat.path}
-          view={chat.view}
-          classlist="rightbar__icons__icon"
-        />
+        <div className="rightbar__icons__icon">
+          <Svg
+            path={bell.path}
+            view={bell.view}
+            classlist="rightbar__icons__icon__svg rightbar__icons__icon__svg__active"
+            pathtags={{
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+            }}
+          />
+          <div className="rightbar__icons__icon__badge"></div>
+        </div>
+        <div className="rightbar__icons__icon ">
+          <Svg
+            path={chat.path}
+            view={chat.view}
+            classlist="rightbar__icons__icon__svg rightbar__icons__icon__svg__active"
+          />
+          <div className="rightbar__icons__icon__badge"></div>
+        </div>
         <Svg
           path={settings.path}
           view={settings.view}
-          classlist="rightbar__icons__icon"
+          classlist="rightbar__icons__icon__svg"
           pathtags={{
             fillRule: "evenodd",
             clipRule: "evenodd",

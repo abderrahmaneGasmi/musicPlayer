@@ -5,6 +5,7 @@ import {
   heart,
   music,
   next,
+  note,
   play,
   previous,
   random,
@@ -199,8 +200,8 @@ function Header() {
   return (
     <div className="header">
       <div className="header__logo">
-        <img src="/logo.png" alt="logo" />
-        <div className="header__logo__text">MUUUSIC</div>
+        <Svg path={note.path} view={note.view} classlist="header__logo__icon" />
+        <div className="header__logo__text">Quaver</div>
       </div>
       <div className="header__search">
         <input type="text" placeholder="Search for songs, artists, albums" />
@@ -329,7 +330,7 @@ function MediaPlayer({
           </div>
         </div>
         <div className="mediaplayer__controls__progress">
-          <div className="mediaplayer__controls__progress__time">00:00</div>
+          <div className="mediaplayer__controls__progress__time">01:34</div>
           <div className="mediaplayer__controls__progress__bar">
             <div className="mediaplayer__controls__progress__bar__progress"></div>
           </div>
