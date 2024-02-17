@@ -29,6 +29,37 @@ export default function Main() {
         <div className="banner__overlay"></div>
       </div>
       <div className="maincontainer__title">
+        <div className="maincontainer__title__text">You might like</div>
+        <div className="maincontainer__title__view">View all</div>
+      </div>
+      <div className="maincontainer__stories">
+        <StoryMusic
+          image="/genre (1).png"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <StoryMusic
+          image="/genre (2).png"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <StoryMusic
+          image="/genre (3).png"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <StoryMusic
+          image="/genre (4).jpg"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <StoryMusic
+          image="/genre (5).jpg"
+          song="Song Title"
+          artist="Artist Name"
+        />
+      </div>
+      <div className="maincontainer__title">
         <div className="maincontainer__title__text">Recently played songs</div>
         <div className="maincontainer__title__view">View all</div>
       </div>
@@ -326,6 +357,27 @@ function RecentlyPlayedItem({
       <div className="recentlyplayed__text">
         <div className="recentlyplayed__text__title">{song}</div>
         <div className="recentlyplayed__text__artist">{artist}</div>
+      </div>
+    </div>
+  );
+}
+function StoryMusic({
+  song,
+  artist,
+  image,
+}: {
+  song: string;
+  artist: string;
+  image: string;
+}) {
+  return (
+    <div className="storymusic">
+      <div className="storymusic__image">
+        <img src={image} alt="song" />
+      </div>
+      <div className="storymusic__text">
+        <div className="storymusic__text__title">{song}</div>
+        <div className="storymusic__text__artist">{artist}</div>
       </div>
     </div>
   );
