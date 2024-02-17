@@ -3,10 +3,13 @@
   display: flex;
   flex-direction: column;
   border-left: 1px solid rgba(135, 135, 135, 0.271);
+  border-bottom: 1px solid rgba(135, 135, 135, 0.271);
+  border-right: 1px solid rgba(135, 135, 135, 0.271);
   gap: 4rem;
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 100%;
+  padding-bottom: 3rem;
   &__icons {
     display: flex;
     align-items: center;

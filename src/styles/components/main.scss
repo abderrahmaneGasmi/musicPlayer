@@ -29,6 +29,12 @@
     grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
     gap: 2rem;
   }
+  &__recentlyplayed {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 2rem;
+  }
 }
 .header {
   display: flex;
@@ -39,6 +45,9 @@
   background-color: #2e335a;
 
   height: 5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   &__logo {
     display: flex;
     align-items: center;
@@ -403,5 +412,40 @@
     backdrop-filter: blur(9px);
     -webkit-backdrop-filter: blur(9px);
     transition: backdrop-filter 0.3s;
+  }
+}
+.recentlyplayed {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  &__image {
+    $size: 16rem;
+    width: $size;
+    height: 13rem;
+    background-color: #ffffff4f;
+    padding: 1rem 0;
+    border-radius: 1rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    &__artist {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #ffffff77;
+    }
   }
 }

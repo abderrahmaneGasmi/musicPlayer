@@ -29,6 +29,37 @@ export default function Main() {
         <div className="banner__overlay"></div>
       </div>
       <div className="maincontainer__title">
+        <div className="maincontainer__title__text">Recently played songs</div>
+        <div className="maincontainer__title__view">View all</div>
+      </div>
+      <div className="maincontainer__recentlyplayed">
+        <RecentlyPlayedItem
+          image="/genre (1).png"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <RecentlyPlayedItem
+          image="/genre (2).png"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <RecentlyPlayedItem
+          image="/genre (3).png"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <RecentlyPlayedItem
+          image="/genre (4).jpg"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <RecentlyPlayedItem
+          image="/genre (5).jpg"
+          song="Song Title"
+          artist="Artist Name"
+        />
+      </div>
+      <div className="maincontainer__title">
         <div className="maincontainer__title__text">Trending Genres</div>
         <div className="maincontainer__title__view">View all</div>
       </div>
@@ -67,6 +98,62 @@ export default function Main() {
           songs={20}
           genre="Classical"
           desc="Classical music"
+        />
+      </div>
+      <div className="maincontainer__title">
+        <div className="maincontainer__title__text">Trending songs</div>
+        <div className="maincontainer__title__view">View all</div>
+      </div>
+      <div className="maincontainer__recentlyplayed">
+        <RecentlyPlayedItem
+          image="/genre (1).png"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <RecentlyPlayedItem
+          image="/genre (2).png"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <RecentlyPlayedItem
+          image="/genre (3).png"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <RecentlyPlayedItem
+          image="/genre (4).jpg"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <RecentlyPlayedItem
+          image="/genre (5).jpg"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <RecentlyPlayedItem
+          image="/genre (1).png"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <RecentlyPlayedItem
+          image="/genre (2).png"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <RecentlyPlayedItem
+          image="/genre (3).png"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <RecentlyPlayedItem
+          image="/genre (4).jpg"
+          song="Song Title"
+          artist="Artist Name"
+        />
+        <RecentlyPlayedItem
+          image="/genre (5).jpg"
+          song="Song Title"
+          artist="Artist Name"
         />
       </div>
       <MediaPlayer
@@ -219,6 +306,27 @@ function MediaPlayer({
         </div>
       </div>
       <div className="mediaplayer__overlay"></div>
+    </div>
+  );
+}
+function RecentlyPlayedItem({
+  song,
+  artist,
+  image,
+}: {
+  song: string;
+  artist: string;
+  image: string;
+}) {
+  return (
+    <div className="recentlyplayed">
+      <div className="recentlyplayed__image">
+        <img src={image} alt="song" />
+      </div>
+      <div className="recentlyplayed__text">
+        <div className="recentlyplayed__text__title">{song}</div>
+        <div className="recentlyplayed__text__artist">{artist}</div>
+      </div>
     </div>
   );
 }
