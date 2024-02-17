@@ -1,3 +1,111 @@
 .rightbar {
-  width: 28rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgba(135, 135, 135, 0.271);
+  gap: 4rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background-color: #2e335a;
+    height: 5rem;
+    &__icon {
+      height: 2.5rem;
+      width: 2.5rem;
+      fill: #ffffff8e;
+      cursor: pointer;
+      transition: color 0.3s;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+  &__profile {
+    position: relative;
+    align-self: center;
+    $size: 20rem;
+    width: $size;
+    height: $size;
+    transform: rotate(-45deg);
+
+    &__image {
+      width: 15rem;
+      height: 15rem;
+
+      clip-path: polygon(
+        30% 0%,
+        70% 0%,
+        100% 30%,
+        100% 70%,
+        70% 100%,
+        30% 100%,
+        0% 70%,
+        0% 30%
+      );
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__name {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      h3 {
+        font-size: 2.5rem;
+        color: #ffffff;
+        margin-block: 0;
+      }
+      p {
+        font-size: 1.5rem;
+        color: #ffffffa4;
+        margin-block: 0;
+      }
+    }
+  }
+}
+.octagonWrap {
+  $size: 20rem;
+  width: $size;
+  height: $size;
+  float: left;
+  position: absolute;
+  overflow: hidden;
+  // rotate: 15deg;
+}
+.octagon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-origin: border-box;
+  background-position: top center;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  transform: rotate(45deg);
+  border: 3px solid #ffffffb0;
+  border-radius: 19px;
+  box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.6901960784);
+}
+.octagon:before {
+  position: absolute;
+  /* There needs to be a negative value here to cancel
+     * out the width of the border. It's currently -3px,
+     * but if the border were 5px, then it'd be -5px.
+     */
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  transform: rotate(45deg);
+  content: "";
+  border: inherit;
+  box-shadow: inherit;
 }

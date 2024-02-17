@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 2rem;
+    margin: 0 2rem;
     &__text {
       font-size: 3rem;
       font-weight: 700;
@@ -36,12 +36,15 @@
   align-items: center;
   padding: 1rem;
   gap: 5rem;
+  background-color: #2e335a;
+
+  height: 5rem;
   &__logo {
     display: flex;
     align-items: center;
     gap: 1rem;
     img {
-      $size: 7rem;
+      $size: 5rem;
       width: $size;
       height: $size;
 
@@ -85,7 +88,6 @@
 .banner {
   display: flex;
   margin: 2rem;
-  margin-right: 0;
   height: 20rem;
   position: relative;
   border-radius: 1rem;
@@ -236,8 +238,7 @@
   position: sticky;
   bottom: 0.5rem;
   left: 0;
-  right: 0;
-  margin: 0 0 0 2rem;
+  margin: 0 2rem;
   border-radius: 1rem;
   height: 10rem;
   z-index: 1000;
@@ -245,6 +246,7 @@
   align-items: center;
   padding: 0 1rem;
   gap: 1rem;
+  overflow: hidden;
   &__info {
     display: flex;
     align-items: center;
@@ -302,17 +304,53 @@
       display: flex;
       align-items: center;
       gap: 2rem;
+      justify-content: space-between;
+      width: 100%;
       &__smallicon {
         $size: 1.8rem;
         width: $size;
         height: $size;
         fill: #ffffffa4;
+        cursor: pointer;
+        &:hover {
+          fill: #ffffff;
+        }
       }
       &__icon {
         $size: 2.3rem;
         width: $size;
         height: $size;
-        fill: #ffffffa4;
+        fill: #000000a4;
+        background-color: #ffffffa4;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 4px 3px 3px 5px;
+        &:hover {
+          background-color: #ffffff;
+        }
+      }
+      &__soundbar {
+        position: relative;
+
+        width: 8rem;
+        height: 0.5rem;
+        background-color: #ffffff27;
+        border-radius: 0.5rem;
+        &__progress {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 50%;
+          $color: #ffffff;
+          background-color: $color;
+          box-shadow: 0 2px 9px 0px $color;
+        }
+      }
+      &__container {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
       }
     }
     &__progress {
@@ -324,7 +362,7 @@
       &__time {
         font-size: 1.2rem;
         font-weight: 500;
-        color: #ffffffa4;
+        color: #ffffff;
       }
       &__bar {
         position: relative;
@@ -333,13 +371,15 @@
         height: 0.5rem;
         // background-color: #ffffffa4;
         border-radius: 0.5rem;
+        background-color: #ffffff27;
+
         &__progress {
           position: absolute;
           top: 0;
           left: 0;
           height: 100%;
           width: 50%;
-          $color: #d5d5d5;
+          $color: #ffffff;
           background-color: $color;
           box-shadow: 0 2px 9px 0px $color;
         }
@@ -352,7 +392,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #7e7296d0;
+    background-image: linear-gradient(
+      to right,
+      #00eaff73,
+      #00d4ff73,
+      #00b4ff73,
+      #a982ff73,
+      #ff00d873
+    );
     backdrop-filter: blur(9px);
     -webkit-backdrop-filter: blur(9px);
     transition: backdrop-filter 0.3s;

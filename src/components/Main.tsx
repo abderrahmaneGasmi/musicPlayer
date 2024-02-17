@@ -10,6 +10,9 @@ import {
   random,
   refresh,
   search,
+  speaker1,
+  speaker2,
+  speakermute,
 } from "../static/icons";
 export default function Main() {
   return (
@@ -52,25 +55,18 @@ export default function Main() {
           songs={20}
         />
         <Genre
-          genre="Pop"
-          background="/genre (1).png"
+          background="/genre (4).jpg"
+          avatar="/images/profile.jpg"
+          genre="Jazz"
+          desc="Jazz music"
+          songs={20}
+        />
+        <Genre
+          background="/genre (5).jpg"
           avatar="/images/logo (1).png"
-          desc="The best of pop music"
           songs={20}
-        />
-        <Genre
-          genre="Rock"
-          background="/genre (2).png"
-          avatar="/images/logo (2).png"
-          desc="Rock and roll"
-          songs={20}
-        />
-        <Genre
-          genre="Hip Hop"
-          background="/genre (3).png"
-          avatar="/images/logo (3).png"
-          desc="Hip hop music"
-          songs={20}
+          genre="Classical"
+          desc="Classical music"
         />
       </div>
       <MediaPlayer
@@ -174,31 +170,45 @@ function MediaPlayer({
       </div>
       <div className="mediaplayer__controls">
         <div className="mediaplayer__controls__play">
-          <Svg
-            path={random.path}
-            view={random.view}
-            classlist="mediaplayer__controls__play__smallicon"
-          />
-          <Svg
-            path={previous.path}
-            view={previous.view}
-            classlist="mediaplayer__controls__play__smallicon"
-          />
-          <Svg
-            path={play.path}
-            view={play.view}
-            classlist="mediaplayer__controls__play__icon"
-          />{" "}
-          <Svg
-            path={next.path}
-            view={next.view}
-            classlist="mediaplayer__controls__play__smallicon"
-          />
-          <Svg
-            path={refresh.path}
-            view={refresh.view}
-            classlist="mediaplayer__controls__play__smallicon"
-          />
+          <div></div>
+          <div className="mediaplayer__controls__play__container">
+            <Svg
+              path={random.path}
+              view={random.view}
+              classlist="mediaplayer__controls__play__smallicon"
+            />
+            <Svg
+              path={previous.path}
+              view={previous.view}
+              classlist="mediaplayer__controls__play__smallicon"
+            />
+            <Svg
+              path={play.path}
+              view={play.view}
+              classlist="mediaplayer__controls__play__icon"
+            />{" "}
+            <Svg
+              path={next.path}
+              view={next.view}
+              classlist="mediaplayer__controls__play__smallicon"
+            />
+            <Svg
+              path={refresh.path}
+              view={refresh.view}
+              classlist="mediaplayer__controls__play__smallicon"
+            />
+          </div>{" "}
+          <div className="mediaplayer__controls__play__container">
+            <Svg
+              path={speaker2.path}
+              view={speaker2.view}
+              classlist="mediaplayer__controls__play__smallicon"
+            />
+
+            <div className="mediaplayer__controls__play__soundbar">
+              <div className="mediaplayer__controls__play__soundbar__progress"></div>
+            </div>
+          </div>
         </div>
         <div className="mediaplayer__controls__progress">
           <div className="mediaplayer__controls__progress__time">00:00</div>
