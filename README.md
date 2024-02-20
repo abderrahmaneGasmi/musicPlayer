@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+# PaintSocket
+creating a music player using modern glassmorphism and neon effect
+# Screenshots
+<div style="display:flex">
+        <img width="47%" height="250px" style="margin-right:10px;" src="https://github.com/abderrahmaneGasmi/musicPlayer/assets/119729705/0ce21d0a-b8d0-46f3-bcaf-f8152a42ba5f"/>
+       <img width="47%" height="250px" src="https://github.com/abderrahmaneGasmi/musicPlayer/assets/119729705/f19bc5d8-837c-4dc3-afbe-a6b4dffd07ba"/>
+         <img width="47%" height="250px" src="https://github.com/abderrahmaneGasmi/musicPlayer/assets/119729705/d875edb3-bd2b-49b4-aefe-85c1b702aef4"/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+  
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 💻 Running the project
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+to run this project 
+Clone this repository :
+```
+git clone [https://github.com/abderrahmaneGasmi/musicPlayer]
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+```
+cd paintsocketfront
+```
+Install packages :
+```
+npm i
+```
+When installation is complete, run command :
+```
+npm run dev
